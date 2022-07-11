@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    background-color: #c9d2dc;
+    place-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+section{
+    height: 476px;
+    width: 207px;    
+    background-color: #f2f2f3;
+    border-radius: 30px;
+    padding: 11px;
+    z-index: 1;
+    margin-left: 8px;
+    margin-top: 63px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.482);
+}
+.above {
+    height: 30%;
+    width: 100%;
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+span{
+    font-size: 60px;
+    font-family:'Times New Roman', Times, serif;
+    animation: blink 1s linear 1s infinite normal forwards;
+}
+@keyframes blink{
+    0%{visibility: hidden;}
+    50%{visibility: hidden;}
+}
+.middle{
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid black;
+    font-size: 25px;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+#del{
+    position: absolute;
+    right: 20px;
+}
+#del:hover{
+    color: rgb(200, 200, 201);
+}
+.below{
+    width: 100%;
+    height: 60%;
+    font-size: 25px;
+    color: rgb(51, 51, 51);
+    display: flex;
+    justify-content: center;
+}
+.below ul{
+    
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    flex-flow:row wrap;
+    padding: 5px;
+}
+.below ul li{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin: auto;
+}
+.below ul li:hover{
+    background-color: rgb(108, 107, 111);
+    color:white;
+}
+.below ul li:nth-child(1){
+    color: red;
+}
+.below ul li:nth-child(4n),
+.below ul li:nth-child(2),
+.below ul li:nth-child(3)
+{
+    color: rgb(255, 150, 112);
+}
+.below ul li:nth-child(20){
+    color: black;
+    font-size: 40px;
+    background-color: coral;
+}
+.below ul li:nth-child(20):hover{
+    background-color: rgb(255, 174, 145);
+}
+p{
+    visibility: collapse;
+}
+.power{
+        height: 75px;
+        width: 3px;
+        position: absolute;
+        z-index: 20;
+        left: 59.6%;
+        top: 28%;
+}
+.power:hover{
+    border: 1px solid rgb(133, 84, 255);
+}
+
+@media only screen and (min-width: 916px) {
+    body{
+    background-size: contain;
+    }
+    body{
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        background-color: #c9d2dc;
+        place-items: center;
+        background-image: url(mbg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        z-index: 1;
+    }
+    body::before{
+        content: 'Calculator';
+        font-family: Segoe Script;
+        font-weight: 900;
+        font-size: 40px;
+        color: black;
+        position: absolute;
+        margin-left: -60%;
+        margin-top: -300px;
+        box-shadow: none;
+    }
+    body::after{
+        content: 'By Prateek Singh Saini.';
+        font-family: Segoe Script;
+        font-weight: 900;
+        font-size: 10px;
+        color: black;
+        position: absolute;
+        margin-left: -60%;
+        margin-top: -200px;
+    }
+    section{
+        height: 500px;
+        width: 210px;    
+        background-color: transparent;
+        margin-left: 8px;
+        margin-top: -31px;
+        box-shadow: none;
+    }
+    .below ul li{
+        height: 50px;
+        width: 50px;
+    }
+    p{
+        position: fixed;
+        margin-top: 400px;
+        margin-left: 800px;
+        visibility: visible;
+    }
+}
+@media only screen and (min-width: 1300px) {
+    section{
+        height: 537px;
+        width: 236px;
+        background-color: transparent;
+        margin-left: 8px;
+        margin-top: -31px;
+    }
+    body::before{
+        content: 'Calculator';
+        font-family: Segoe Script;
+        font-weight: 900;
+        font-size: 80px;
+        color: black;
+        position: absolute;
+        margin-left: -60%;
+        margin-top: -300px;
+    }
+    body::after{
+        content: 'By Prateek Singh Saini.';
+        font-family: Segoe Script;
+        font-weight: 900;
+        font-size: 20px;
+        color: black;
+        position: absolute;
+        margin-left: -60%;
+        margin-top: -200px;
+    }
+    p{
+        position: fixed;
+        margin-top: 400px;
+        margin-left: 950px;
+        visibility: visible;
+    }
+}
+
